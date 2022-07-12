@@ -2,4 +2,124 @@
   padding: 0;
   margin: 0;
 }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: poppins;
+}
+
+body .header {
+  height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100%;
+}
+
+body .header .header-logo {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+body .header .header-Links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .header .header-Links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+body .header .header-Links ul li a {
+  padding: 0px 13px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: #807d7d;
+  font-size: 1rem;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+body .header .header-Links ul li .border-link {
+  border: 2px solid black;
+  color: black;
+}
+
+body .header .header-Links ul #active-link a {
+  color: black;
+}
+
+body .header .side-nav {
+  position: fixed;
+  height: 100vh;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  width: 100%;
+  max-width: 350px;
+  top: 100px;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+body .header .side-nav ul {
+  width: 100%;
+  list-style: none;
+  padding: 0px 20px;
+}
+
+body .header .side-nav ul li {
+  margin-top: 20px;
+}
+
+body .header .side-nav ul li a {
+  font-size: 1.1rem;
+}
+
+body .header .mobile-btn {
+  display: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .header .mobile-btn button {
+  font-size: 1.5rem;
+  padding: 0px;
+  border: none;
+}
+
+@media only screen and (max-width: 1100px) {
+  body .header .header-Links {
+    display: none;
+  }
+  body .header .mobile-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 /*# sourceMappingURL=index.css.map */

@@ -2,3 +2,122 @@
     padding: 0;
     margin: 0;
 }
+
+$default-color: black;
+$default-color-light: rgb(128, 125, 125);
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body{
+    font-family: poppins;
+
+    .header{
+        height: 100px;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        // border-bottom: 1px solid black;
+
+        .header-logo{
+            font-size: 1.5rem;
+            text-transform: uppercase;
+
+        }
+
+        .header-Links{
+            display: flex;
+            justify-content: flex-end;
+
+            ul{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                list-style: none;
+
+                li{
+
+                    a{
+                        padding: 0px 13px;
+                        display: inline-flex;
+                        color: $default-color-light;
+                        font-size: 1rem;
+                        height: 45px;
+                        display: flex;
+                        align-items: center;
+                        text-transform: uppercase;
+                        font-weight: bold;
+
+                    }
+
+                    .border-link{
+                        border: 2px solid $default-color;
+                        color: $default-color;
+                    }
+                }
+
+                #active-link{
+
+                    a{
+                        color: $default-color;
+                    }
+                }
+            }
+        }
+
+        .side-nav{
+            position: fixed;
+            height: 100vh;
+            transition: 1s ease all;
+            width: 100%;
+            max-width: 350px;
+            // background: red;
+            top: 100px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, .2);
+
+            ul{
+                width: 100%;
+                list-style: none;
+                padding: 0px 20px;
+
+                li{
+                    margin-top: 20px;
+
+                    a{
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+
+        .mobile-btn{
+            display: none;
+            // border: 1px solid $default-color;
+            justify-content: flex-end;
+
+            button{
+                font-size: 1.5rem;
+                padding: 0px;
+                border: none;
+            }
+
+        }
+    }
+
+    @media only screen and (max-width: 1100px){
+
+        .header{
+
+            .header-Links{
+                display: none;
+            }
+
+            .mobile-btn{
+                display: flex;
+            }
+        }
+    }
+
+}
