@@ -35,33 +35,52 @@ body{
                 display: flex;
                 width: 100%;
                 justify-content: space-between;
+                align-items: center;
                 list-style: none;
 
                 li{
 
                     a{
-                        padding: 0px 13px;
                         display: inline-flex;
                         color: $default-color-light;
                         font-size: 1rem;
-                        height: 45px;
                         display: flex;
                         align-items: center;
                         text-transform: uppercase;
                         font-weight: bold;
+                        position: relative;
 
+                    }
+
+                    a:not([class="border-link"])::after{
+                        position: absolute;
+                        content: "";
+                        width: 0%;
+                        height: 2px;
+                        background: $default-color;
+                        left: 0px;
+                        bottom: -2px;
+                        transition: 0.5s ease all;
                     }
 
                     .border-link{
+                        height: 45px;
+                        padding: 0px 13px;
                         border: 2px solid $default-color;
                         color: $default-color;
                     }
+
                 }
 
                 #active-link{
 
                     a{
                         color: $default-color;
+                    }
+
+                    
+                    a:not([class="border-link"])::after{
+                        width: 100%;
                     }
                 }
             }
@@ -87,7 +106,34 @@ body{
 
                     a{
                         font-size: 1.1rem;
+                        color: $default-color-light;
+                        position: relative;
                     }
+
+                    a::after{
+                        position: absolute;
+                        content: "";
+                        width: 0%;
+                        height: 2px;
+                        background: $default-color;
+                        left: 0px;
+                        bottom: -4px;
+                        transition: 0.5s ease all;
+                    }
+                }
+
+                #active-link{
+
+                    a{
+
+                        color: $default-color;
+                    }
+
+                    a::after{
+                        width: 100%;
+                    }
+
+                    
                 }
             }
         }
