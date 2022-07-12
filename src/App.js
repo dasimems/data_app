@@ -260,6 +260,198 @@ function App() {
 
         </Col>
 
+        <Col span={24} className="page-pricing">
+
+          <h1>Affordable Data Plans and Price</h1>
+
+          <Row justify="center">
+
+            <Col span={22}>
+
+              <Row justify="space-between" className="price-container">
+
+                <Col span={5} className="prices">
+
+                  <div className="price-image">
+
+                  </div>
+
+
+                  <div className="price-title">MTN DATA</div>
+
+                  <ul className="price-list">
+
+                    <li className="list">
+                      <span className="data-amount">1.0GB</span>
+                      <span className="data-price">&#8358;280</span>
+                      <span className="data-duration">30 days</span>
+                    </li>
+
+                    <li className="list">
+                      <span className="data-amount">1.0GB</span>
+                      <span className="data-price">&#8358;280</span>
+                      <span className="data-duration">30 days</span>
+                    </li>
+
+                    <li className="list">
+                      <span className="data-amount">1.0GB</span>
+                      <span className="data-price">&#8358;280</span>
+                      <span className="data-duration">30 days</span>
+                    </li>
+
+                    <li className="list">
+                      <span className="data-amount">1.0GB</span>
+                      <span className="data-price">&#8358;280</span>
+                      <span className="data-duration">30 days</span>
+                    </li>
+
+                  </ul>
+
+                  <div className="price-button">
+                    <Button type="primary" className="buy-data-btn">Buy Now</Button>
+                  </div>
+
+                </Col>
+
+                <Col span={5} className="prices">
+
+                  <div className="price-image">
+
+                  </div>
+
+
+                  <div className="price-title">MTN DATA</div>
+
+                  <ul className="price-list">
+
+                    <li className="list">
+                      <span className="data-amount">1.0GB</span>
+                      <span className="data-price">&#8358;280</span>
+                      <span className="data-duration">30 days</span>
+                    </li>
+
+                    <li className="list">
+                      <span className="data-amount">1.0GB</span>
+                      <span className="data-price">&#8358;280</span>
+                      <span className="data-duration">30 days</span>
+                    </li>
+
+                    <li className="list">
+                      <span className="data-amount">1.0GB</span>
+                      <span className="data-price">&#8358;280</span>
+                      <span className="data-duration">30 days</span>
+                    </li>
+
+                    <li className="list">
+                      <span className="data-amount">1.0GB</span>
+                      <span className="data-price">&#8358;280</span>
+                      <span className="data-duration">30 days</span>
+                    </li>
+
+                  </ul>
+
+                  <div className="price-button">
+                    <Button type="primary" className="buy-data-btn">Buy Now</Button>
+                  </div>
+
+                </Col>
+
+                <Col span={5} className="prices">
+
+                  <div className="price-image">
+
+                  </div>
+
+
+                  <div className="price-title">MTN DATA</div>
+
+                  <ul className="price-list">
+
+                    <li className="list">
+                      <span className="data-amount">1.0GB</span>
+                      <span className="data-price">&#8358;280</span>
+                      <span className="data-duration">30 days</span>
+                    </li>
+
+                    <li className="list">
+                      <span className="data-amount">1.0GB</span>
+                      <span className="data-price">&#8358;280</span>
+                      <span className="data-duration">30 days</span>
+                    </li>
+
+                    <li className="list">
+                      <span className="data-amount">1.0GB</span>
+                      <span className="data-price">&#8358;280</span>
+                      <span className="data-duration">30 days</span>
+                    </li>
+
+                    <li className="list">
+                      <span className="data-amount">1.0GB</span>
+                      <span className="data-price">&#8358;280</span>
+                      <span className="data-duration">30 days</span>
+                    </li>
+
+                  </ul>
+
+                  <div className="price-button">
+                    <Button type="primary" className="buy-data-btn">Buy Now</Button>
+                  </div>
+
+                </Col>
+
+                <Col span={5} className="prices">
+
+                  <div className="price-image">
+
+                  </div>
+
+
+                  <div className="price-title">MTN DATA</div>
+
+                  <ul className="price-list">
+
+                    <li className="list">
+                      <span className="data-amount">1.0GB</span>
+                      <span className="data-price">&#8358;280</span>
+                      <span className="data-duration">30 days</span>
+                    </li>
+
+                    <li className="list">
+                      <span className="data-amount">1.0GB</span>
+                      <span className="data-price">&#8358;280</span>
+                      <span className="data-duration">30 days</span>
+                    </li>
+
+                    <li className="list">
+                      <span className="data-amount">1.0GB</span>
+                      <span className="data-price">&#8358;280</span>
+                      <span className="data-duration">30 days</span>
+                    </li>
+
+                    <li className="list">
+                      <span className="data-amount">1.0GB</span>
+                      <span className="data-price">&#8358;280</span>
+                      <span className="data-duration">30 days</span>
+                    </li>
+
+                  </ul>
+
+                  <div className="price-button">
+                    <Button type="primary" className="buy-data-btn">Buy Now</Button>
+                  </div>
+
+                </Col>
+
+              </Row>
+
+            </Col>
+
+          </Row>
+
+
+
+        </Col>
+ 
       </Row>
 
       <Footer />
