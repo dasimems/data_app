@@ -320,6 +320,8 @@ body .page-sections .page-service .service-container .content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 30px;
+  border-radius: 5px;
 }
 
 body .page-sections .page-service .service-container .content .content-image {
@@ -331,12 +333,62 @@ body .page-sections .page-service .service-container .content .content-image {
 
 body .page-sections .page-service .service-container .content h3 {
   font-size: 1.1rem;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
 
 body .page-sections .page-service .service-container .content h3,
 body .page-sections .page-service .service-container .content p {
   text-align: center;
   margin-top: 10px;
+}
+
+body .page-sections .page-about {
+  padding: 80px 0px;
+}
+
+body .page-sections .page-about .page-about-container .page-about-description h3 {
+  color: #3D59E8;
+}
+
+body .page-sections .page-about .page-about-container .page-about-description h1 {
+  color: #404F90;
+  margin-top: 20px;
+}
+
+body .page-sections .page-about .page-about-container .page-about-description p {
+  font-size: 1.05rem;
+  margin-top: 10px;
+}
+
+body .page-sections .page-about .page-about-container .page-about-description .page-about-reasons {
+  margin-top: 20px;
+}
+
+body .page-sections .page-about .page-about-container .page-about-description .page-about-reasons .reasons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.05rem;
+  border: 1px solid #d8d8d8;
+  margin-bottom: 20px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+body .page-sections .page-about .page-about-container .page-about-description .page-about-reasons .reasons .icon {
+  color: #3D59E8;
+}
+
+body .page-sections .page-about .page-about-container .page-about-description .page-about-reasons .reasons .test {
+  margin-left: 20px;
+}
+
+body .page-sections .page-about .page-about-container .page-about-description .page-about-button button {
+  background: #404F90;
+  border: none;
+  height: 40px;
+  font-size: 1rem;
 }
 
 @media only screen and (max-width: 1100px) {

@@ -3,7 +3,7 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 import { Row, Col, Button } from "antd"
 
-import { BsSlack, BsMessenger} from "react-icons/bs"
+import { BsSlack, BsMessenger, BsCheckLg} from "react-icons/bs"
 import { FaHeadphones } from "react-icons/fa"
 
 function App() {
@@ -114,8 +114,114 @@ function App() {
 
                 </Col>
 
+                <Col span={7} className="content">
+
+                    <div className="content-image"></div>
+
+                    <h3>Buy Data</h3>
+
+                    <p>Buy and enjoy cheap data plan for your internet browsing</p>
+
+                </Col>
+
+                <Col span={7} className="content">
+
+                    <div className="content-image"></div>
+
+                    <h3>Buy Data</h3>
+
+                    <p>Buy and enjoy cheap data plan for your internet browsing</p>
+
+                </Col>
+
+                <Col span={7} className="content">
+
+                    <div className="content-image"></div>
+
+                    <h3>Buy Data</h3>
+
+                    <p>Buy and enjoy cheap data plan for your internet browsing</p>
+
+                </Col>
+
+                <Col span={7} className="content">
+
+                    <div className="content-image"></div>
+
+                    <h3>Buy Data</h3>
+
+                    <p>Buy and enjoy cheap data plan for your internet browsing</p>
+
+                </Col>
+
+                <Col span={7} className="content">
+
+                    <div className="content-image"></div>
+
+                    <h3>Buy Data</h3>
+
+                    <p>Buy and enjoy cheap data plan for your internet browsing</p>
+
+                </Col>
+
               </Row>
 
+            </Col>
+
+          </Row>
+
+        </Col>
+
+        <Col span={22} className="page-about">
+
+          <Row justify="space-between" className="page-about-container">
+
+            <Col span={11} className="page-about-image"></Col>
+            <Col span={10} className="page-about-description">
+              <h3>About</h3>
+              <h1>Why Choose Us</h1>
+
+              <p>Etooconnect is the ultimate solution for Data subscription, Cable subscription, Airtime among others in Nigeria..
+
+              We serve customers base on love that continues to grow exponentially, offering transmission services that span various categories including Data subscription, cable sub, electric bill, Airtime(vtu), and much more. With a reliable customer support</p>
+
+              <Row justify="space-between" className="page-about-reasons">
+
+                <Col span="10" className="reasons">
+
+                  <div className="icon"><BsCheckLg /></div>
+                  <div className="test">We are fast</div>
+
+                </Col>
+
+
+                <Col span="10" className="reasons">
+
+                  <div className="icon"><BsCheckLg /></div>
+                  <div className="test">We are fast</div>
+
+                </Col>
+                
+                <Col span="10" className="reasons">
+
+                  <div className="icon"><BsCheckLg /></div>
+                  <div className="test">We are fast</div>
+
+                </Col>
+
+                <Col span="10" className="reasons">
+
+                  <div className="icon"><BsCheckLg /></div>
+                  <div className="test">We are fast</div>
+
+                </Col>
+
+              </Row>
+
+              <div className="page-about-button">
+                <Button type="primary">Register</Button>
+              </div>
+              
             </Col>
 
           </Row>
