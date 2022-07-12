@@ -4,8 +4,15 @@
 }
 
 $default-color: black;
+$default-color-lightest: rgb(199, 197, 197);
+$default-color-lighter: rgb(180, 177, 177);
 $default-color-light: rgb(128, 125, 125);
+$default-color-opposite: white;
 $primary-color: #404F90;
+$primary-color-second: #3D59E8;
+$primary-color-lightest: #F5F7FD;
+$tetiary-color: #FFA500;
+$danger-color: #FF0000;
 
 html {
     scroll-behavior: smooth;
@@ -17,9 +24,11 @@ body{
 
     .header{
         height: 100px;
+        width: 100%;
         align-items: center;
         position: fixed;
-        width: 100%;
+        z-index: 999;
+        background: $default-color-opposite;
         // border-bottom: 1px solid black;
 
         .header-logo{
@@ -163,7 +172,165 @@ body{
         .page-banner{
             height: calc(100vh - 100px);
             background: $primary-color;
+
+            .banner-container{
+                height: 100%;
+                align-items: center;
+
+                .banner-description{
+
+                    h1{
+
+                        color: $default-color-opposite;
+                        letter-spacing: 7px;
+                        font-size: 3rem;
+                    }
+
+                    p{
+                        font-size: 1.1rem;
+                        color: $default-color-lightest;
+                        font-weight: 500;
+
+                    }
+
+                    .banner-button{
+                        display: flex;
+                        margin-top: 35px;
+                        
+
+                        button{
+                            height: 50px;
+                            border: none;
+                            color: $default-color-opposite;
+                            font-size: 1.1rem;
+                            letter-spacing: 2px;
+
+                        }
+
+                        button:hover{
+                            transition: 0.5s ease all;
+                            transform: scale(1.1);
+                        }
+
+                        .register-button{
+                            background: $tetiary-color;
+                        }
+
+                        .login-button{
+                            margin-left: 15px;
+                            background: $danger-color;
+                        }
+                    }
+                }
+            }
         }
+
+        .page-why-to-choose-us{
+            background: $default-color-opposite;
+            padding: 40px;
+            height: auto;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .2);
+            margin-top: -90px;
+            display: flex;
+            justify-content: space-between;
+
+
+            .content{
+                width: 30%;
+                font-size: 1.05rem;
+                display: flex;
+
+                .content-icon{
+                    width: 70px;
+                    height: auto;
+                    margin-right: 20px;
+
+                    .icon{
+                        position: relative;
+                        font-size: 2.1rem;
+                        color: $default-color-opposite;
+                        width: 70px;
+                        height: 70px;
+                        background: $primary-color;
+                        border-radius: 100% 50% 50% 100% / 75% 69% 69% 75%;
+                        // line-height: 70px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .icon::after{
+                        content: "";
+                        width: 40px;
+                        height: 40px;
+                        position: absolute;
+                        top: -15px;
+                        left: -5px;
+                        background: #3d59e8;
+                        opacity: 0.2;
+                        border-radius: 50%;
+                    }
+                }
+
+                .content-description{
+                    width: auto;
+
+                }
+            }
+        }
+
+        .page-service{
+            background: $primary-color-lightest;
+            padding: 100px 0px;
+
+            h4,
+            h1{
+                text-align: center;
+            }
+
+            h4{
+                color: $primary-color-second;
+                font-size: 1.1rem;
+            }
+
+            h1{
+                margin-top: 10px;
+                font-size: 2.4rem;
+                color: $primary-color;
+            }
+
+            .service-container{
+
+
+                .content{
+                    padding: 30px 20px;
+                    height: 350px;
+                    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .2);
+                    background: $default-color-opposite;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    .content-image{
+                        width: 150px;
+                        height: 150px;
+                        border-radius: 50%;
+                        background: $primary-color-lightest;
+                    }
+
+                    h3{
+                        font-size: 1.1rem;
+                    }
+
+                    h3,
+                    p{
+                        text-align: center;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        } 
     }
 
     @media only screen and (max-width: 1100px){

@@ -14,11 +14,13 @@ body {
 
 body .header {
   height: 100px;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
-  width: 100%;
+  z-index: 999;
+  background: white;
 }
 
 body .header .header-logo {
@@ -162,6 +164,179 @@ body .page-sections {
 body .page-sections .page-banner {
   height: calc(100vh - 100px);
   background: #404F90;
+}
+
+body .page-sections .page-banner .banner-container {
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .page-sections .page-banner .banner-container .banner-description h1 {
+  color: white;
+  letter-spacing: 7px;
+  font-size: 3rem;
+}
+
+body .page-sections .page-banner .banner-container .banner-description p {
+  font-size: 1.1rem;
+  color: #c7c5c5;
+  font-weight: 500;
+}
+
+body .page-sections .page-banner .banner-container .banner-description .banner-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 35px;
+}
+
+body .page-sections .page-banner .banner-container .banner-description .banner-button button {
+  height: 50px;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+body .page-sections .page-banner .banner-container .banner-description .banner-button button:hover {
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body .page-sections .page-banner .banner-container .banner-description .banner-button .register-button {
+  background: #FFA500;
+}
+
+body .page-sections .page-banner .banner-container .banner-description .banner-button .login-button {
+  margin-left: 15px;
+  background: #FF0000;
+}
+
+body .page-sections .page-why-to-choose-us {
+  background: white;
+  padding: 40px;
+  height: auto;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  margin-top: -90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .page-sections .page-why-to-choose-us .content {
+  width: 30%;
+  font-size: 1.05rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .page-sections .page-why-to-choose-us .content .content-icon {
+  width: 70px;
+  height: auto;
+  margin-right: 20px;
+}
+
+body .page-sections .page-why-to-choose-us .content .content-icon .icon {
+  position: relative;
+  font-size: 2.1rem;
+  color: white;
+  width: 70px;
+  height: 70px;
+  background: #404F90;
+  border-radius: 100% 50% 50% 100% / 75% 69% 69% 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .page-sections .page-why-to-choose-us .content .content-icon .icon::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -15px;
+  left: -5px;
+  background: #3d59e8;
+  opacity: 0.2;
+  border-radius: 50%;
+}
+
+body .page-sections .page-why-to-choose-us .content .content-description {
+  width: auto;
+}
+
+body .page-sections .page-service {
+  background: #F5F7FD;
+  padding: 100px 0px;
+}
+
+body .page-sections .page-service h4,
+body .page-sections .page-service h1 {
+  text-align: center;
+}
+
+body .page-sections .page-service h4 {
+  color: #3D59E8;
+  font-size: 1.1rem;
+}
+
+body .page-sections .page-service h1 {
+  margin-top: 10px;
+  font-size: 2.4rem;
+  color: #404F90;
+}
+
+body .page-sections .page-service .service-container .content {
+  padding: 30px 20px;
+  height: 350px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .page-sections .page-service .service-container .content .content-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #F5F7FD;
+}
+
+body .page-sections .page-service .service-container .content h3 {
+  font-size: 1.1rem;
+}
+
+body .page-sections .page-service .service-container .content h3,
+body .page-sections .page-service .service-container .content p {
+  text-align: center;
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 1100px) {
