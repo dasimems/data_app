@@ -10,9 +10,9 @@ function App() {
 
       <Header />
 
-      <Row justify="center">
+      <Row justify="center" className="page-sections">
 
-        <Col span={22}  className="page-sections"></Col>
+        <Col span={24} className="page-banner"></Col>
 
       </Row>
 

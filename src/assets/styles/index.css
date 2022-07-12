@@ -154,6 +154,16 @@ body .header .mobile-btn button {
   border: none;
 }
 
+body .page-sections {
+  padding-top: 100px;
+  min-height: calc(100vh);
+}
+
+body .page-sections .page-banner {
+  height: calc(100vh - 100px);
+  background: #404F90;
+}
+
 @media only screen and (max-width: 1100px) {
   body .header .header-Links {
     display: none;

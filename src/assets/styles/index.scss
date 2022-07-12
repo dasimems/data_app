@@ -5,6 +5,7 @@
 
 $default-color: black;
 $default-color-light: rgb(128, 125, 125);
+$primary-color: #404F90;
 
 html {
     scroll-behavior: smooth;
@@ -149,6 +150,19 @@ body{
                 border: none;
             }
 
+        }
+
+    }
+
+    
+    .page-sections{
+          
+        padding-top: 100px;
+        min-height: calc(100vh);
+
+        .page-banner{
+            height: calc(100vh - 100px);
+            background: $primary-color;
         }
     }
 
