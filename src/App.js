@@ -172,7 +172,7 @@ function App() {
 
         </Col>
 
-        <Col span={22} className="page-about">
+        <Col span={22} className="page-about" id="about">
 
           <Row justify="space-between" className="page-about-container">
 
@@ -224,6 +224,38 @@ function App() {
               
             </Col>
 
+          </Row>
+
+        </Col>
+
+        <Col span={22} className="page-statistic">
+
+          <Row justify="space-between">
+
+            <Col span={4} className="stats-card">
+              <h1 className="stats">2000</h1>
+              <p className="text">Customers</p>
+            </Col>
+
+            
+            <Col span={4} className="stats-card">
+              <h1 className="stats">2000</h1>
+              <p className="text">Customers</p>
+            </Col>
+
+
+            
+            <Col span={4} className="stats-card">
+              <h1 className="stats">2000</h1>
+              <p className="text">Customers</p>
+            </Col>
+
+            
+            <Col span={4} className="stats-card">
+              <h1 className="stats">2000</h1>
+              <p className="text">Customers</p>
+            </Col>
+            
           </Row>
 
         </Col>

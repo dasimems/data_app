@@ -386,8 +386,65 @@ body{
                             height: 40px;
                             font-size: 1rem;
                         }
+
+                        button:hover{
+                            transition: 0.5s ease all;
+                            transform: scale(1.1);
+                        }
                     }
                 }
+            }
+
+        }
+
+        .page-statistic{
+            padding: 80px 0px;
+
+            .stats-card{
+                position: relative;
+                border-radius: 8px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: $primary-color;
+                color: $default-color-opposite;
+                height: 200px;
+
+                h1{
+                    font-size: rem;
+                    color: $default-color-opposite;
+                    margin: 0px;
+
+                }
+
+                p{
+                    margin: 0px;
+                    margin-top: -5px;
+                    color: $default-color-lighter;
+                }
+            }
+
+            .stats-card::after,
+            .stats-card::before{
+                position: absolute;
+                content: "";
+                width: 30px;
+                height: 30px;
+                background: inherit;
+                border: 3px solid $default-color-opposite;
+                top: 50%;
+                border-radius: 50%;
+                transform: translate(0%, -50%);
+
+            }
+
+            .stats-card::after{
+                right: -18px;
+            }
+
+            .stats-card::before{
+                left: -18px;
             }
 
         }

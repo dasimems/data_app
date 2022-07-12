@@ -391,6 +391,72 @@ body .page-sections .page-about .page-about-container .page-about-description .p
   font-size: 1rem;
 }
 
+body .page-sections .page-about .page-about-container .page-about-description .page-about-button button:hover {
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body .page-sections .page-statistic {
+  padding: 80px 0px;
+}
+
+body .page-sections .page-statistic .stats-card {
+  position: relative;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #404F90;
+  color: white;
+  height: 200px;
+}
+
+body .page-sections .page-statistic .stats-card h1 {
+  font-size: rem;
+  color: white;
+  margin: 0px;
+}
+
+body .page-sections .page-statistic .stats-card p {
+  margin: 0px;
+  margin-top: -5px;
+  color: #b4b1b1;
+}
+
+body .page-sections .page-statistic .stats-card::after,
+body .page-sections .page-statistic .stats-card::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: inherit;
+  border: 3px solid white;
+  top: 50%;
+  border-radius: 50%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+}
+
+body .page-sections .page-statistic .stats-card::after {
+  right: -18px;
+}
+
+body .page-sections .page-statistic .stats-card::before {
+  left: -18px;
+}
+
 @media only screen and (max-width: 1100px) {
   body .header .header-Links {
     display: none;
