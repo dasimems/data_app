@@ -5,6 +5,7 @@ import { Row, Col, Button } from "antd"
 
 import { BsSlack, BsMessenger, BsCheckLg} from "react-icons/bs"
 import { FaHeadphones } from "react-icons/fa"
+import { GrAndroid } from "react-icons/gr"
 
 function App() {
 
@@ -449,6 +450,32 @@ function App() {
           </Row>
 
 
+
+        </Col>
+
+        <Col span={24} className="page-app-download">
+
+          <Row justify="space-between" className="app-download-container">
+            
+            <Col span={10} push={1} className="app-download-text">
+
+              <h1>Download Our Mobile Application</h1>
+
+              <p>Now Available on Android</p>
+
+              <Button>Try It Now</Button>
+
+            </Col>
+
+            <Col span={10} pull={1} className="app-download-image">
+              
+              <div className="image">
+                <GrAndroid />
+              </div>
+
+            </Col>
+
+          </Row>
 
         </Col>
  
