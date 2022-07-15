@@ -51,7 +51,8 @@ function App() {
       }
   ],
   pageProps = {
-    component: <LandingPageContent />
+    component: <LandingPageContent />,
+    bgColor: "white"
   },
   [pageState, setPageState] = useState(pageProps),
   anotherLinkArray = [];
@@ -63,7 +64,8 @@ function App() {
   useEffect(()=>{
 
     var links = pageLinkParams["*"].split("/"),
-        sectionElement = document.getElementById(links[0]);
+        sectionElement = document.getElementById(links[0]),
+        color = "rgb(248, 248, 248)";
 
         // console.log(links);
 
@@ -86,7 +88,8 @@ function App() {
           setPageState((prevState)=>{
               return({
                 ...prevState,
-                component: <Login />
+                component: <Login />,
+                bgColor: color
               })
           })
 
@@ -95,7 +98,8 @@ function App() {
           setPageState((prevState)=>{
               return({
                 ...prevState,
-                component: <Signup />
+                component: <Signup />,
+                bgColor: color
               })
           })
 
@@ -123,7 +127,7 @@ function App() {
 
       <Header links={pageLinks}/>
 
-      <Row justify="center" className="page-sections">
+      <Row justify="center" className="page-sections" style={{background: pageState.bgColor}}>
 
         {pageState.component}
  

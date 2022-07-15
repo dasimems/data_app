@@ -724,6 +724,161 @@ body .page-sections .page-faq .faq-container .faq-content .ant-collapse-item-act
   color: white;
 }
 
+body .page-sections .page-login-container {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  margin: 20px 0px;
+  border-radius: 10px;
+  background: white;
+  padding: 20px;
+}
+
+body .page-sections .page-login-container .login-header {
+  border-bottom: 1px solid #c7c5c5;
+}
+
+body .page-sections .page-login-container .login-header h1 {
+  width: 100%;
+  text-align: center;
+  color: #2D323D;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+body .page-sections .page-login-container .form-container .form-err {
+  color: white;
+  background: rgba(247, 48, 48, 0.6);
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  margin-top: 15px;
+}
+
+body .page-sections .page-login-container .form-container .form-content {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .page-sections .page-login-container .form-container .form-content label,
+body .page-sections .page-login-container .form-container .form-content input,
+body .page-sections .page-login-container .form-container .form-content button {
+  height: 45px;
+}
+
+body .page-sections .page-login-container .form-container .form-content button:disabled {
+  background: #c7c5c5;
+  color: #807d7d;
+}
+
+body .page-sections .page-login-container .form-container .form-content label {
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .page-sections .page-login-container .form-container .form-content label .required {
+  color: #FF0000;
+  margin-left: 5px;
+}
+
+body .page-sections .page-login-container .form-container .form-content input {
+  border: 1px solid #b4b1b1;
+  border-radius: 3px;
+  padding: 0px 10px;
+  width: 100%;
+  background: white;
+}
+
+body .page-sections .page-login-container .form-container .form-content .password-input {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #c7c5c5;
+  border-radius: 5px;
+}
+
+body .page-sections .page-login-container .form-container .form-content .password-input input {
+  border: none;
+  border-top-left-radius: none;
+  border-bottom-left-radius: none;
+}
+
+body .page-sections .page-login-container .form-container .form-content .password-input button {
+  height: 46px;
+  min-width: 50px;
+  border-radius: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-left: -1px;
+  background: white;
+  border: none;
+  border-left: 1px solid #c7c5c5;
+  color: black;
+  font-size: 1.1rem;
+}
+
+body .page-sections .page-login-container .form-container .form-content .password-input input:focus ~ button {
+  border: 2px solid black;
+  height: 47px;
+  margin-top: -1.5px;
+}
+
+body .page-sections .page-login-container .form-container .form-content a {
+  margin-left: 5px;
+  position: relative;
+  color: #3D59E8;
+}
+
+body .page-sections .page-login-container .form-container .form-content a::after {
+  width: 0%;
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -1.5px;
+  height: 1.5px;
+  background: #3D59E8;
+}
+
+body .page-sections .page-login-container .form-container .form-content a:hover::after {
+  width: 100%;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+body .page-sections .page-login-container .form-container .form-content .sign-up-text {
+  font-size: 1.02rem;
+}
+
+body .page-sections .page-login-container .form-container .content-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 20px;
+}
+
+body .page-sections .page-login-container .form-container .content-center {
+  margin-top: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .page-sections .page-login-container .form-container .content-center button {
+  width: 100%;
+}
+
 body .page-footer {
   background: #2D323D;
   color: #c7c5c5;

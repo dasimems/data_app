@@ -14,6 +14,7 @@ $primary-color-second: #3D59E8;
 $primary-color-lightest: #F5F7FD;
 $tetiary-color: #FFA500;
 $danger-color: #FF0000;
+$danger-color-secondary: rgba(247, 48, 48, 0.6);
 
 html {
     scroll-behavior: smooth;
@@ -692,6 +693,150 @@ body{
                     }
                 }
 
+            }
+        }
+
+        .page-login-container{
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .1);
+            margin: 20px 0px;
+            border-radius: 10px;
+            background: $default-color-opposite;
+            padding: 20px;
+
+            .login-header{
+                border-bottom: 1px solid $default-color-lightest;
+
+                h1{
+                    width: 100%;
+                    text-align: center;
+                    color: $primary-color-deep;
+                    font-size: 1.3rem;
+                    text-transform: uppercase;
+                }
+            }
+
+            .form-container{
+
+                .form-err{
+                    color: white;
+                    background: $danger-color-secondary;
+                    padding: 10px;
+                    border-radius: 5px;
+                    opacity: 0;
+                    margin-top: 15px;
+                }
+
+                .form-content{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+
+                    label,
+                    input,
+                    button{
+                        height: 45px;
+                    }
+
+                    button:disabled{
+                        background: $default-color-lightest;
+                        color: $default-color-light;
+                    }
+
+                    label{
+                        font-weight: bolder;
+                        display: flex;
+                        align-items: center;
+
+
+                        .required{
+                            color: $danger-color;
+                            margin-left: 5px;
+                        }
+                    }
+
+                    input{
+                        border: 1px solid $default-color-lighter;
+                        border-radius: 3px;
+                        padding: 0px 10px;
+                        width: 100%;
+                        background: $default-color-opposite;
+                    }
+
+                    .password-input{
+                        width: 100%;
+                        display: flex;
+                        border: 1px solid $default-color-lightest;
+                        border-radius: 5px;
+
+                        input{
+                            border: none;
+                            border-top-left-radius: none;
+                            border-bottom-left-radius: none;
+                        }
+
+                        button{
+                            height: 46px;
+                            min-width: 50px;
+                            border-radius: 0px;
+                            border-top-right-radius: 5px;
+                            border-bottom-right-radius: 5px;
+                            margin-left: -1px;
+                            background: $default-color-opposite;
+                            border: none;
+                            border-left: 1px solid $default-color-lightest;
+                            color: $default-color;
+                            font-size: 1.1rem;
+                        }
+
+                        input:focus~button{
+                            border: 2px solid $default-color;
+                            height: 47px;
+                            margin-top: -1.5px;
+
+                        }
+                    }
+
+                    a{
+                        margin-left: 5px;
+                        position: relative;
+                        color: $primary-color-second;
+                    }
+
+                    a::after{
+                        width: 0%;
+                        position: absolute;
+                        content: "";
+                        left: 0;
+                        bottom: -1.5px;
+                        height: 1.5px;
+                        background: $primary-color-second;
+                    }
+
+                    a:hover::after{
+                        width: 100%;
+                        transition: 0.5s ease all;
+                    }
+
+                    .sign-up-text{
+                        font-size: 1.02rem;
+                    }
+                }
+
+                .content-end{
+                    align-items: flex-end;
+                    margin-top: 20px;
+                }
+
+                .content-center{
+                    margin-top: 20px;
+                    align-items: center;
+
+                    button{
+                        width: 100%;
+                    }
+
+                }
             }
         }
 
