@@ -835,6 +835,14 @@ body{
 
         @media only screen and (max-width: 767px){
 
+            .page-pricing{
+
+                h1{
+                    padding: 0px 10px;
+                    font-size: 1.5rem !important;
+                }
+            }
+
             .page-footer{
 
                 .footer-bottom{

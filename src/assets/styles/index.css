@@ -829,6 +829,10 @@ body .page-footer .footer-bottom .bottom-content-two .ref-link {
 }
 
 @media only screen and (max-width: 1100px) and (max-width: 767px) {
+  body .page-pricing h1 {
+    padding: 0px 10px;
+    font-size: 1.5rem !important;
+  }
   body .page-footer .footer-bottom .bottom-content-one {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
