@@ -249,8 +249,8 @@ function App() {
 
           <Row justify="space-between" className="page-about-container">
 
-            <Col span={11} className="page-about-image"></Col>
-            <Col span={10} className="page-about-description">
+            <Col span={11} lg={{span: 11}} md={{span: 10}} xs={{span: 24}} className="page-about-image"></Col>
+            <Col span={10} lg={{span: 10}} md={{span: 11}} xs={{span: 24}} className="page-about-description">
               <h3>About</h3>
               <h1>Why Choose Us</h1>
 

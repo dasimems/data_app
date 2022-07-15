@@ -87,11 +87,11 @@ export default function Footer(){
 
                     <Row justify="space-between">
 
-                        <Col span={10} lg={{span: 10, push: 1}} md={{span: 10, push: 1}} xs={{span: 24, push: 1}}  className="bottom-content-one">
+                        <Col span={10} lg={{span: 10, push: 1}} md={{span: 10, push: 1}} xs={{span: 24}}  className="bottom-content-one">
                             All etoconnect &copy; Copyrights Reserved
                         </Col>
 
-                        <Col span={10} lg={{span: 10, pull: 1}} md={{span: 10, pull: 1}} xs={{span: 24, push: 1}} className="bottom-content-two">
+                        <Col span={10} lg={{span: 10, pull: 1}} md={{span: 10, pull: 1}} xs={{span: 24}} className="bottom-content-two">
                             Designed and developed by &nbsp;<a className="ref-link" href="https://www.facebook.com/dasimems" target="_blank" rel="noreferrer">Dasimems</a>
                         </Col>
 
