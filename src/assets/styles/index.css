@@ -165,10 +165,10 @@ body .page-sections {
 
 body .page-sections .page-banner {
   height: calc(100vh - 100px);
-  max-height: 790px !important;
+  max-height: 700px !important;
   min-height: 647px !important;
   background: #404F90;
-  padding: 90px 0px;
+  padding: 0px 0px 50px 0px;
 }
 
 body .page-sections .page-banner .banner-container {

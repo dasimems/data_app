@@ -174,10 +174,10 @@ body{
 
         .page-banner{
             height: calc(100vh - 100px);
-            max-height: 790px !important;
+            max-height: 700px !important;
             min-height: 647px !important;
             background: $primary-color;
-            padding: 90px 0px;
+            padding: 0px 0px 50px 0px;
 
             .banner-container{
                 height: 100%;

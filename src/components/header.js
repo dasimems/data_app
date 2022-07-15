@@ -14,25 +14,9 @@ export default function Header(props){
             activeLink: "home",
             mobileHeader: false
         },
-        [headerState, setHeaderState] = useState(headerProps),
-        windowScroll = window.addEventListener('scroll', checkScroll),
-        linkPosArr = [],
-        secPos = props.links.map((links)=>{
-
-            if(document.getElementById(links.link)){
-
-                var doc = document.getElementById(links.link) 
-
-                linkPosArr.push(doc.offsetTop);
-                
-                return({
-                    sectionPosition: doc.offsetTop,
-                    ...links
-                })
-            }
-
-
-        });
+        [headerState, setHeaderState] = useState(headerProps);
+        
+        window.addEventListener('scroll', checkScroll);
 
         // console.log(secPos)
 
@@ -63,26 +47,6 @@ export default function Header(props){
 
         // console.log(posY);
 
-        secPos.forEach((links)=>{
-
-            if((links !== undefined && links !== null ) && document.getElementById(links.link)){
-
-                var an = linkPosArr.filter((pos)=> posY >= (pos + 100)),
-                    arrLength = an.length;
-                if(arrLength < 1){
-                    arrLength = 1;
-                }
-
-                // console.log(activeLink[0], secPos[(arrLength - 1)].link)
-                if(activeLink[0] !== secPos[(arrLength - 1)].link){
-                    
-
-                    // navigate(`/${secPos[(arrLength - 1)].link}`);
-                }
-                
-            }
-
-        });
 
         
         // console.log("working")
