@@ -144,7 +144,7 @@ export default function Header(props){
                     <Button className="open-close-button" onClick={changeHeader}>{headerState.mobileHeader? <MdOutlineClose /> : <BiMenu />}</Button>
                 </Col>
 
-                <div className="side-nav" style={{right: headerState.mobileHeader? "0px": "-400px"}}>
+                <div className="side-nav" style={{right: headerState.mobileHeader? "0px": "-580px"}}>
 
                     <ul className="link-contents">
 

@@ -619,7 +619,7 @@ function App() {
 
           <Row justify="center" className="faq-container">
 
-            <Col span={22} className="faq-content">
+            <Col span={24} className="faq-content">
 
               <h3>Do you have any question about our service?</h3>
 

@@ -165,8 +165,10 @@ body .page-sections {
 
 body .page-sections .page-banner {
   height: calc(100vh - 100px);
-  max-height: 547px !important;
+  max-height: 790px !important;
+  min-height: 647px !important;
   background: #404F90;
+  padding: 90px 0px;
 }
 
 body .page-sections .page-banner .banner-container {
@@ -861,6 +863,9 @@ body .page-footer .footer-bottom .bottom-content-two .ref-link {
 }
 
 @media only screen and (max-width: 1100px) and (max-width: 575px) {
+  body .side-nav {
+    max-width: unset !important;
+  }
   body .page-app-download .app-download-container .app-download-text {
     display: -webkit-box;
     display: -ms-flexbox;
