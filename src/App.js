@@ -177,7 +177,7 @@ function App() {
 
               <Row justify="space-between" className="service-container">
 
-                <Col span={7} className="content">
+                <Col span={7} lg={{span: 7}} md={{span: 7}} sm={{span: 10}} xs={{span: 24}} className="content">
 
                     <div className="content-image"></div>
 
@@ -187,7 +187,7 @@ function App() {
 
                 </Col>
 
-                <Col span={7} className="content">
+                <Col span={7} lg={{span: 7}} md={{span: 7}} sm={{span: 10}} xs={{span: 24}} className="content">
 
                     <div className="content-image"></div>
 
@@ -197,7 +197,7 @@ function App() {
 
                 </Col>
 
-                <Col span={7} className="content">
+                <Col span={7} lg={{span: 7}} md={{span: 7}} sm={{span: 10}} xs={{span: 24}} className="content">
 
                     <div className="content-image"></div>
 
@@ -207,7 +207,7 @@ function App() {
 
                 </Col>
 
-                <Col span={7} className="content">
+                <Col span={7} lg={{span: 7}} md={{span: 7}} sm={{span: 10}} xs={{span: 24}} className="content">
 
                     <div className="content-image"></div>
 
@@ -217,7 +217,7 @@ function App() {
 
                 </Col>
 
-                <Col span={7} className="content">
+                <Col span={7} lg={{span: 7}} md={{span: 7}} sm={{span: 10}} xs={{span: 24}} className="content">
 
                     <div className="content-image"></div>
 
@@ -227,7 +227,7 @@ function App() {
 
                 </Col>
 
-                <Col span={7} className="content">
+                <Col span={7} lg={{span: 7}} md={{span: 7}} sm={{span: 10}} xs={{span: 24}} className="content">
 
                     <div className="content-image"></div>
 
