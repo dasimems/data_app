@@ -3,13 +3,12 @@ import {Row, Col, Button } from "antd"
 
 import { BiMenu } from "react-icons/bi"
 import { MdOutlineClose } from "react-icons/md"
-import { Link, useNavigate, useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
 export default function Header(props){
 
 
     var linkParams = useParams(),
-        navigate = useNavigate(),
         headerProps = {
             activeLink: "home",
             mobileHeader: false
@@ -42,8 +41,8 @@ export default function Header(props){
 
     function checkScroll(){
 
-        var posY = window.scrollY,
-            activeLink = linkParams["*"].split("/");
+        // var posY = window.scrollY,
+        //     activeLink = linkParams["*"].split("/");
 
         // console.log(posY);
 
