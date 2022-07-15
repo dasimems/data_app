@@ -249,8 +249,8 @@ function App() {
 
           <Row justify="space-between" className="page-about-container">
 
-            <Col span={11} lg={{span: 11}} md={{span: 10}} xs={{span: 24}} className="page-about-image"></Col>
-            <Col span={10} lg={{span: 10}} md={{span: 11}} xs={{span: 24}} className="page-about-description">
+            <Col span={11} lg={{span: 11}} md={{span: 9}} xs={{span: 24}} className="page-about-image"></Col>
+            <Col span={10} lg={{span: 10}} md={{span: 12}} xs={{span: 24}} className="page-about-description">
               <h3>About</h3>
               <h1>Why Choose Us</h1>
 
@@ -305,26 +305,26 @@ function App() {
 
           <Row justify="space-between">
 
-            <Col span={4} className="stats-card">
+            <Col span={4} lg={{span: 4}} md={{span: 5}} sm={{span: 9}} xs={{span: 24}} className="stats-card">
               <h1 className="stats">2000</h1>
               <p className="text">Customers</p>
             </Col>
 
             
-            <Col span={4} className="stats-card">
+            <Col span={4} lg={{span: 4}} md={{span: 5}} sm={{span: 9}} xs={{span: 24}} className="stats-card">
               <h1 className="stats">2000</h1>
               <p className="text">Customers</p>
             </Col>
 
 
             
-            <Col span={4} className="stats-card">
+            <Col span={4} lg={{span: 4}} md={{span: 5}} sm={{span: 9}} xs={{span: 24}} className="stats-card">
               <h1 className="stats">2000</h1>
               <p className="text">Customers</p>
             </Col>
 
             
-            <Col span={4} className="stats-card">
+            <Col span={4} lg={{span: 4}} md={{span: 5}} sm={{span: 9}} xs={{span: 24}} className="stats-card">
               <h1 className="stats">2000</h1>
               <p className="text">Customers</p>
             </Col>

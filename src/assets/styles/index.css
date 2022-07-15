@@ -408,6 +408,7 @@ body .page-sections .page-statistic {
 }
 
 body .page-sections .page-statistic .stats-card {
+  margin-bottom: 30px;
   position: relative;
   border-radius: 8px;
   display: -webkit-box;
