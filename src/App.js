@@ -260,7 +260,7 @@ function App() {
 
               <Row justify="space-between" className="page-about-reasons">
 
-                <Col span="10" className="reasons">
+                <Col span="10" lg={{span: 10}} md={{span: 10}} sm={{span: 10}} xs={{span: 24}} className="reasons">
 
                   <div className="icon"><BsCheckLg /></div>
                   <div className="test">We are fast</div>
@@ -268,21 +268,21 @@ function App() {
                 </Col>
 
 
-                <Col span="10" className="reasons">
+                <Col span="10" lg={{span: 10}} md={{span: 10}} sm={{span: 10}} xs={{span: 24}} className="reasons">
 
                   <div className="icon"><BsCheckLg /></div>
                   <div className="test">We are fast</div>
 
                 </Col>
                 
-                <Col span="10" className="reasons">
+                <Col span="10" lg={{span: 10}} md={{span: 10}} sm={{span: 10}} xs={{span: 24}} className="reasons">
 
                   <div className="icon"><BsCheckLg /></div>
                   <div className="test">We are fast</div>
 
                 </Col>
 
-                <Col span="10" className="reasons">
+                <Col span="10" lg={{span: 10}} md={{span: 10}} sm={{span: 10}} xs={{span: 24}} className="reasons">
 
                   <div className="icon"><BsCheckLg /></div>
                   <div className="test">We are fast</div>
