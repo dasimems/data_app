@@ -1,18 +1,90 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "./components/footer";
 import Header from "./components/header";
-import { Row, Col, Button } from "antd"
+import { Row, Col, Button,Collapse } from "antd";
 
-import { BsSlack, BsMessenger, BsCheckLg} from "react-icons/bs"
-import { FaHeadphones } from "react-icons/fa"
-import { GrAndroid } from "react-icons/gr"
+import { BsSlack, BsMessenger, BsCheckLg} from "react-icons/bs";
+import { FaHeadphones } from "react-icons/fa";
+import { GrAndroid } from "react-icons/gr";
+
+import { useParams } from "react-router-dom";
 
 function App() {
+
+  
+  var { Panel } = Collapse,
+    pageLinkParams = useParams(),
+    pageLinks = [
+      {
+          link: "home",
+          label: "Home",
+          borderAvailable: false
+      },
+      {
+          link: "service",
+          label: "Service",
+          borderAvailable: false
+      },
+      {
+          link: "about",
+          label: "About",
+          borderAvailable: false
+      },
+      {
+          link: "price",
+          label: "Price",
+          borderAvailable: false
+      },
+      {
+          link: "testimonial",
+          label: "Testimonial",
+          borderAvailable: false
+      },
+      {
+          link: "faq",
+          label: "FAQ",
+          borderAvailable: false
+      },
+      {
+          link: "login",
+          label: "Sign In",
+          borderAvailable: true
+      }
+  ];
+
+  useEffect(()=>{
+
+    var links = pageLinkParams["*"].split("/"),
+        sectionElement = document.getElementById(links[0]);
+
+        // console.log(links);
+
+        if(links.length < 1 || links[0] === ""){
+          sectionElement = document.getElementById("home")
+        }
+
+        if(sectionElement){
+          // console.log(sectionElement.offsetTop);
+
+          window.scrollTo({
+            top: (sectionElement.offsetTop - 100),
+            left: 0
+          });
+
+        }
+
+
+
+  }, [pageLinkParams]);
+
+
+
+  
 
   return (
     <>
 
-      <Header />
+      <Header links={pageLinks}/>
 
       <Row justify="center" className="page-sections">
 
@@ -539,6 +611,50 @@ function App() {
               
 
             </Row>
+
+        </Col>
+
+        <Col span={24} className="page-faq" id="faq">
+
+          <h1>FAQ</h1>
+
+          <Row justify="center" className="faq-container">
+
+            <Col span={22} className="faq-content">
+
+              <h3>Do you have any question about our service?</h3>
+
+              <Collapse accordion className="accordion">
+
+                  <Panel header="How To Buy Data" key="1">
+                    <p>1. Log in to your account</p>
+                    <p>2. If not click here to register</p>
+                    <p>3. After log in click fund my account</p>
+                    <p>4. Select Coupon payment</p>
+                    <p>NB:You can buy coupon code from our agents</p>
+                  </Panel>
+
+                  <Panel header="How To Buy Data" key="2">
+                    <p>1. Log in to your account</p>
+                    <p>2. If not click here to register</p>
+                    <p>3. After log in click fund my account</p>
+                    <p>4. Select Coupon payment</p>
+                    <p>NB:You can buy coupon code from our agents</p>
+                  </Panel>
+
+                  <Panel header="How To Buy Data" key="3">
+                    <p>1. Log in to your account</p>
+                    <p>2. If not click here to register</p>
+                    <p>3. After log in click fund my account</p>
+                    <p>4. Select Coupon payment</p>
+                    <p>NB:You can buy coupon code from our agents</p>
+                  </Panel>
+                  
+                </Collapse>
+
+            </Col>
+
+          </Row>
 
         </Col>
  

@@ -3,55 +3,38 @@ import {Row, Col, Button } from "antd"
 
 import { BiMenu } from "react-icons/bi"
 import { MdOutlineClose } from "react-icons/md"
-import { Link, useParams } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 
-export default function Header(){
+export default function Header(props){
 
 
     var linkParams = useParams(),
+        navigate = useNavigate(),
         headerProps = {
             activeLink: "home",
             mobileHeader: false
         },
         [headerState, setHeaderState] = useState(headerProps),
-        pageLinks = [
-            {
-                link: "home",
-                label: "Home",
-                borderAvailable: false
-            },
-            {
-                link: "service",
-                label: "Service",
-                borderAvailable: false
-            },
-            {
-                link: "about",
-                label: "About",
-                borderAvailable: false
-            },
-            {
-                link: "price",
-                label: "Price",
-                borderAvailable: false
-            },
-            {
-                link: "testimonial",
-                label: "Testimonial",
-                borderAvailable: false
-            },
-            {
-                link: "faq",
-                label: "FAQ",
-                borderAvailable: false
-            },
-            {
-                link: "login",
-                label: "Sign In",
-                borderAvailable: true
-            }
-        ];
+        windowScroll = window.addEventListener('scroll', checkScroll),
+        linkPosArr = [],
+        secPos = props.links.map((links)=>{
 
+            if(document.getElementById(links.link)){
+
+                var doc = document.getElementById(links.link) 
+
+                linkPosArr.push(doc.offsetTop);
+                
+                return({
+                    sectionPosition: doc.offsetTop,
+                    ...links
+                })
+            }
+
+
+        });
+
+        // console.log(secPos)
 
     useEffect(()=>{
 
@@ -72,6 +55,39 @@ export default function Header(){
         // console.log(links[0]);
 
     }, [linkParams]);
+
+    function checkScroll(){
+
+        var posY = window.scrollY,
+            activeLink = linkParams["*"].split("/");
+
+        // console.log(posY);
+
+        secPos.forEach((links)=>{
+
+            if((links !== undefined && links !== null ) && document.getElementById(links.link)){
+
+                var an = linkPosArr.filter((pos)=> posY >= (pos + 100)),
+                    arrLength = an.length;
+                if(arrLength < 1){
+                    arrLength = 1;
+                }
+
+                console.log(activeLink[0], secPos[(arrLength - 1)].link)
+                if(activeLink[0] !== secPos[(arrLength - 1)].link){
+                    
+
+                    // navigate(`/${secPos[(arrLength - 1)].link}`);
+                }
+                
+            }
+
+        });
+
+        
+        // console.log("working")
+    
+    }
 
     function changeHeader(){
 
@@ -104,7 +120,7 @@ export default function Header(){
                     
                     <ul className="link-contents">
 
-                        {pageLinks.map((links, linkKey)=>{
+                        {props.links.map((links, linkKey)=>{
 
                             // console.log(linkKey)
 
@@ -132,7 +148,7 @@ export default function Header(){
 
                     <ul className="link-contents">
 
-                        {pageLinks.map((links, linkKey)=>{
+                        {props.links.map((links, linkKey)=>{
 
                             // console.log(linkKey)
 

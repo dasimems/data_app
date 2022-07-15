@@ -9,6 +9,7 @@ $default-color-lighter: rgb(180, 177, 177);
 $default-color-light: rgb(128, 125, 125);
 $default-color-opposite: white;
 $primary-color: #404F90;
+$primary-color-deep: #2D323D;
 $primary-color-second: #3D59E8;
 $primary-color-lightest: #F5F7FD;
 $tetiary-color: #FFA500;
@@ -105,6 +106,7 @@ body{
             // background: red;
             top: 100px;
             box-shadow: 0px 5px 10px rgba(0, 0, 0, .2);
+            background: $default-color-opposite;
 
             ul{
                 width: 100%;
@@ -171,6 +173,7 @@ body{
 
         .page-banner{
             height: calc(100vh - 100px);
+            max-height: 547px !important;
             background: $primary-color;
 
             .banner-container{
@@ -233,6 +236,7 @@ body{
             margin-top: -90px;
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
 
 
             .content{
@@ -643,6 +647,117 @@ body{
                 }
             }
         }
+
+        .page-faq{
+            background: $primary-color-lightest;
+            padding: 80px 0px;
+
+            h1{
+                font-size: 2rem;
+                color: $primary-color;
+                text-align: center;
+            }
+
+            .faq-container{
+                margin-top: 50px;
+
+                .faq-content{
+                    background: white;
+                    padding: 50px;
+                    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .2);
+
+                    h3{
+                        color: $primary-color;
+                        margin-bottom: 20px;
+                    }
+
+                    .accordion{
+                        margin-top: 30px;
+                        background: white;
+                    }
+
+                    .ant-collapse-item-active{
+
+                        .ant-collapse-header{
+                            background: $primary-color !important;
+                            color: $default-color-opposite;
+                        }
+
+                    }
+                }
+
+            }
+        }
+
+        
+    }
+
+    .page-footer{
+        background: $primary-color-deep;
+        color: $default-color-lightest;
+        
+        .footer-container{
+            padding: 80px 0px;
+            
+            h1,
+            h3{
+                color: $default-color-opposite;
+    
+            }
+    
+            h1{
+                font-size: 2rem;
+    
+            }
+    
+            h3{
+                font-size: 0.9rem;
+                text-transform: uppercase;
+            }
+    
+            ul{
+                list-style: none;
+    
+    
+                li{
+    
+                    a{
+                        
+                        color: $default-color-lightest;
+                    }
+    
+                    a:hover{
+                        transition: 0.5s ease all;
+                        margin-left: 5px;
+                        color: $default-color-opposite;
+                    }
+                }
+    
+            }
+    
+            p{
+    
+                .title{
+                    font-weight: bolder;
+                    color: $default-color-opposite;
+                }
+            }
+        }
+
+        .footer-bottom{
+            border-top: 1px solid $default-color-light;
+            padding: 20px;
+
+            .bottom-content-two{
+                display: flex;
+                justify-content: flex-end;
+
+                .ref-link{
+                    text-decoration: underline;
+                }
+            }
+        }
+        
     }
 
     @media only screen and (max-width: 1100px){
@@ -656,6 +771,59 @@ body{
             .mobile-btn{
                 display: flex;
             }
+        }
+
+      
+        .page-why-to-choose-us{
+
+            .content{
+                font-size: 0.93rem !important;
+
+                .content-icon{
+
+                    .icon{
+                        font-size: 1.8rem !important;
+                        width: 50px !important;
+                        height: 50px !important;
+                    }
+
+                    .icon::after{
+                        width: 35px !important;
+                        height: 35px !important;
+                    }
+
+                }
+            }
+        }
+
+        @media only screen and (max-width: 900px){
+
+            .page-why-to-choose-us{
+
+                .content{
+                    font-size: 0.93rem !important;
+                    width: 100% !important;
+                    margin-bottom: 40px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid $default-color-lightest;
+    
+                    .content-icon{
+    
+                        .icon{
+                            font-size: 1.8rem !important;
+                            width: 50px !important;
+                            height: 50px !important;
+                        }
+    
+                        .icon::after{
+                            width: 35px !important;
+                            height: 35px !important;
+                        }
+    
+                    }
+                }
+            }
+            
         }
     }
 
