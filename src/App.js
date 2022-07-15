@@ -529,7 +529,7 @@ function App() {
 
           <Row justify="space-between" className="app-download-container">
             
-            <Col span={10} push={1} className="app-download-text">
+            <Col span={10} lg={{span: 10, push: 1}} md={{span: 10, push: 1}} sm={{span: 10, push: 1}} xs={{span: 24}} className="app-download-text">
 
               <h1>Download Our Mobile Application</h1>
 
@@ -539,7 +539,7 @@ function App() {
 
             </Col>
 
-            <Col span={10} pull={1} className="app-download-image">
+            <Col span={10} lg={{span: 10, pull: 1}} md={{span: 10, pull: 1}} sm={{span: 10, pull: 1}} xs={{span: 24}} className="app-download-image">
               
               <div className="image">
                 <GrAndroid />

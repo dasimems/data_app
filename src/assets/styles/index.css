@@ -848,4 +848,30 @@ body .page-footer .footer-bottom .bottom-content-two .ref-link {
             justify-content: center !important;
   }
 }
+
+@media only screen and (max-width: 1100px) and (max-width: 575px) {
+  body .page-app-download .app-download-container .app-download-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding: 0px 15px;
+  }
+  body .page-app-download .app-download-container .app-download-text h1 {
+    font-size: 1.7rem;
+  }
+  body .page-app-download .app-download-container .app-download-image {
+    display: none !important;
+  }
+}
 /*# sourceMappingURL=index.css.map */

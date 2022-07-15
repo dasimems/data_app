@@ -73,7 +73,7 @@ export default function Header(props){
                     arrLength = 1;
                 }
 
-                console.log(activeLink[0], secPos[(arrLength - 1)].link)
+                // console.log(activeLink[0], secPos[(arrLength - 1)].link)
                 if(activeLink[0] !== secPos[(arrLength - 1)].link){
                     
 
