@@ -614,6 +614,7 @@ body{
                     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .2);
                     padding: 20px;
                     border-radius: 8px;
+                    margin-bottom: 25px;
 
                     .testimonial-header{
                         display: flex;
@@ -801,6 +802,25 @@ body{
 
                 }
             }
+        }
+
+        @media only screen and (max-width: 930px){
+
+            .testimonial-header{
+
+                .header-name{
+
+                    .name{
+                        font-size: 0.9rem !important
+                    }
+
+                    .work{
+                        font-weight: 400;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+            
         }
 
         @media only screen and (max-width: 900px){

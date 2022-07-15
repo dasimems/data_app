@@ -649,6 +649,7 @@ body .page-sections .page-testimonial .testimonial-container .testimonials {
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   padding: 20px;
   border-radius: 8px;
+  margin-bottom: 25px;
 }
 
 body .page-sections .page-testimonial .testimonial-container .testimonials .testimonial-header {
@@ -806,6 +807,16 @@ body .page-footer .footer-bottom .bottom-content-two .ref-link {
   body .page-why-to-choose-us .content .content-icon .icon::after {
     width: 35px !important;
     height: 35px !important;
+  }
+}
+
+@media only screen and (max-width: 1100px) and (max-width: 930px) {
+  body .testimonial-header .header-name .name {
+    font-size: 0.9rem !important;
+  }
+  body .testimonial-header .header-name .work {
+    font-weight: 400;
+    font-size: 0.8rem;
   }
 }
 

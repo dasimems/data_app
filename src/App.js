@@ -557,7 +557,7 @@ function App() {
 
             <Row justify="space-between" className="testimonial-container">
 
-              <Col span={7} className="testimonials">
+              <Col span={7} lg={{span: 7}} md={{span: 7}} xs={{span: 24}} className="testimonials">
 
                 <div className="testimonial-header">
 
@@ -574,24 +574,7 @@ function App() {
 
               </Col>
 
-              <Col span={7} className="testimonials">
-
-                <div className="testimonial-header">
-
-                  <div className="header-image"></div>
-                  
-                  <div className="header-name">
-                    <p className="name">DADA MOJEED</p>
-                    <p className="work">Ui/Ux designer</p>
-                  </div>
-
-                </div>
-
-                <div className="testimonial-message">I can really say that since I joined this site I have been earning more than before... Kudus To ETOOCONNECT Kudos to the developer of this great site.</div>
-
-              </Col>
-
-              <Col span={7} className="testimonials">
+              <Col span={7} lg={{span: 7}} md={{span: 7}} xs={{span: 24}} className="testimonials">
 
                 <div className="testimonial-header">
 
@@ -608,6 +591,22 @@ function App() {
 
               </Col>
 
+              <Col span={7} lg={{span: 7}} md={{span: 7}} xs={{span: 24}} className="testimonials">
+
+                <div className="testimonial-header">
+
+                  <div className="header-image"></div>
+                  
+                  <div className="header-name">
+                    <p className="name">DADA MOJEED</p>
+                    <p className="work">Ui/Ux designer</p>
+                  </div>
+
+                </div>
+
+                <div className="testimonial-message">I can really say that since I joined this site I have been earning more than before... Kudus To ETOOCONNECT Kudos to the developer of this great site.</div>
+
+              </Col>
               
 
             </Row>
