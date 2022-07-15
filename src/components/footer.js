@@ -14,7 +14,7 @@ export default function Footer(){
                     <Row justify="space-between">
 
 
-                        <Col span={4} className="footer-content">
+                        <Col span={4} lg={{span: 4}} md={{span: 24}} sm={{span: 24}} xs={{span: 24}} className="footer-content">
                             <h1>Logo</h1>
 
                             <p>
@@ -25,7 +25,7 @@ export default function Footer(){
                         </Col>
 
 
-                        <Col span={4} className="footer-content">
+                        <Col span={4} lg={{span: 4}} md={{span: 5}} sm={{span: 10}} xs={{span: 24}} className="footer-content">
                             <h3>Links</h3>
 
                             <ul>
@@ -40,7 +40,7 @@ export default function Footer(){
 
                         </Col>
 
-                        <Col span={4} className="footer-content">
+                        <Col span={4} lg={{span: 4}} md={{span: 5}} sm={{span: 10}} xs={{span: 24}} className="footer-content">
                             <h3>Product</h3>
 
                             <ul>
@@ -55,7 +55,7 @@ export default function Footer(){
 
                         </Col>
 
-                        <Col span={4} className="footer-content">
+                        <Col span={4} lg={{span: 4}} md={{span: 5}} sm={{span: 10}} xs={{span: 24}} className="footer-content">
                             <h3>More</h3>
 
                             <ul>
@@ -67,7 +67,7 @@ export default function Footer(){
 
                         </Col>
 
-                        <Col span={4} className="footer-content">
+                        <Col span={4} lg={{span: 4}} md={{span: 5}} sm={{span: 10}} xs={{span: 24}} className="footer-content">
                             <h3>Information</h3>
 
                             <p><span className="title">Address:</span> Faith junction, beside new stadium Akure, Ondo State.</p>
@@ -87,10 +87,11 @@ export default function Footer(){
 
                     <Row justify="space-between">
 
-                        <Col span={10} push={1}>
+                        <Col span={10} lg={{span: 10, push: 1}} md={{span: 10, push: 1}} xs={{span: 24, push: 1}}  className="bottom-content-one">
                             All etoconnect &copy; Copyrights Reserved
                         </Col>
-                        <Col span={10} pull={1} className="bottom-content-two">
+
+                        <Col span={10} lg={{span: 10, pull: 1}} md={{span: 10, pull: 1}} xs={{span: 24, push: 1}} className="bottom-content-two">
                             Designed and developed by &nbsp;<a className="ref-link" href="https://www.facebook.com/dasimems" target="_blank" rel="noreferrer">Dasimems</a>
                         </Col>
 

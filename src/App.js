@@ -343,7 +343,7 @@ function App() {
 
               <Row justify="space-between" className="price-container">
 
-                <Col span={5} className="prices">
+                <Col span={5} lg={{span: 5}} md={{span: 10}} sm={{span: 11}} xs={{span: 24}} className="prices">
 
                   <div className="price-image">
 
@@ -386,7 +386,7 @@ function App() {
 
                 </Col>
 
-                <Col span={5} className="prices">
+                <Col span={5} lg={{span: 5}} md={{span: 10}} sm={{span: 11}} xs={{span: 24}} className="prices">
 
                   <div className="price-image">
 
@@ -429,7 +429,7 @@ function App() {
 
                 </Col>
 
-                <Col span={5} className="prices">
+                <Col span={5} lg={{span: 5}} md={{span: 10}} sm={{span: 11}} xs={{span: 24}} className="prices">
 
                   <div className="price-image">
 
@@ -472,7 +472,7 @@ function App() {
 
                 </Col>
 
-                <Col span={5} className="prices">
+                <Col span={5} lg={{span: 5}} md={{span: 10}} sm={{span: 11}} xs={{span: 24}} className="prices">
 
                   <div className="price-image">
 

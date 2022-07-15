@@ -22,6 +22,7 @@ html {
 
 body{
     font-family: poppins;
+    min-width: 340px;
 
     .header{
         height: 100px;
@@ -476,6 +477,7 @@ body{
                     justify-content: center;
                     align-items: center;
                     color: $primary-color;
+                    margin-bottom: 30px;
 
                     .price-image{
                         width: 100px;
@@ -714,6 +716,10 @@ body{
                 font-size: 0.9rem;
                 text-transform: uppercase;
             }
+
+            .footer-content{
+                margin-bottom: 50px;
+            }
     
             ul{
                 list-style: none;
@@ -824,6 +830,25 @@ body{
                 }
             }
             
+        }
+
+        @media only screen and (max-width: 767px){
+
+            .page-footer{
+
+                .footer-bottom{
+
+                    .bottom-content-one{
+                        justify-content: center;
+                        display: flex;
+                    }
+
+                    .bottom-content-two{
+                        margin-top: 10px;
+                        justify-content: center !important;
+                    }
+                }
+            }
         }
     }
 
