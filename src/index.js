@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import Dashboard from './admin/dashboard';
 import './assets/fonts/font-style.css';
 import 'antd/dist/antd.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom"
@@ -12,6 +13,7 @@ root.render(
 
       <Routes>
         
+        <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/*' element={<App />} />
 
       </Routes>
