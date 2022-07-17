@@ -8,6 +8,7 @@ import LandingPageContent from "./components/landing_page_content";
 import { useParams } from "react-router-dom";
 import Login from "./components/login";
 import Signup from "./components/signup";
+import './assets/styles/index.css';
 
 function App() {
 

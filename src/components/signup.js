@@ -272,10 +272,11 @@ export default function Signup() {
                 })
             })
 
-            //code to register user
+            //promise code to register user
+            //if registration is successful, redirect to this
 
             setTimeout(()=>{
-                
+
                 navigate(`/verify?email=${email}`);
 
             }, 3000)

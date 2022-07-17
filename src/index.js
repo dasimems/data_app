@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import './assets/styles/index.css';
 import './assets/fonts/font-style.css';
 import 'antd/dist/antd.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom"
