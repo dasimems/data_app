@@ -14,7 +14,6 @@ export default function Login() {
             loginErr: ""
         },
         [loginState, setLoginState] = useState(loginProps),
-        key="updatable",
         navigate = useNavigate();
 
     function handleInput(e){
@@ -65,27 +64,19 @@ export default function Login() {
 
            setTimeout(()=>{
 
-                message.success({
-                    content: "Login Successfull",
-                    key
-                    
-                })
+                message.success("Login Successfull", 2.5).then(()=>{
 
-                setTimeout(()=>{
-                    message.loading({
-                        content: "Redirecting...",
-                        duration: 5,
-                        key
-                        
-                    })
+                    message.loading("Redirecting...", 2.7)
 
                     setTimeout(()=>{
 
                         navigate("/dashboard")
 
-                    }, 1000);
+                    }, 3000);
 
-                }, 1000)
+                });
+
+                
 
 
            }, 3000)
