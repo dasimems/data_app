@@ -107,7 +107,7 @@ export default function Login() {
   return (
     <>
 
-        <Col span={9} className="page-login-container">
+        <Col span={9} lg={{span: 9}} md={{span: 11}} sm={{span: 14}} xs={{span: 22}} className="page-login-container">
 
             <div className="login-header"><h1>Login</h1></div>
 

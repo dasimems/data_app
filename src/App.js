@@ -54,12 +54,7 @@ function App() {
     component: <LandingPageContent />,
     bgColor: "white"
   },
-  [pageState, setPageState] = useState(pageProps),
-  anotherLinkArray = [];
-
-  pageLinks.forEach((links)=>{
-    anotherLinkArray.push(links.link)
-  });
+  [pageState, setPageState] = useState(pageProps);
 
   useEffect(()=>{
 
@@ -117,7 +112,6 @@ function App() {
 
 
   }, [pageLinkParams]);
-
 
 
   

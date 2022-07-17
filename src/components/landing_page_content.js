@@ -5,10 +5,17 @@ import { Row, Col, Button,Collapse } from "antd";
 import { BsSlack, BsMessenger, BsCheckLg} from "react-icons/bs";
 import { FaHeadphones } from "react-icons/fa";
 import { GrAndroid } from "react-icons/gr";
+import { useNavigate } from 'react-router-dom';
 
 export default function LandingPageContent() {
-    var  { Panel } = Collapse;
+    var  { Panel } = Collapse,
+        navigate = useNavigate();
 
+  function redirectTo(link){
+
+    navigate(link);
+
+  }
   return (
     <>
     
@@ -25,8 +32,8 @@ export default function LandingPageContent() {
 
               <div className="banner-button">
 
-                  <Button className="register-button">Register</Button>
-                  <Button className="login-button">Login</Button>
+                  <Button className="register-button" onClick={()=>{ redirectTo("/signup")}}>Register</Button>
+                  <Button className="login-button" onClick={()=>{ redirectTo("/login")}}>Login</Button>
 
               </div>
 
