@@ -30,19 +30,19 @@ export default function Signup() {
   },
   [signupState, setSignupState] = useState(signupProps),
   [buttonState, setButtonState] = useState(buttonProps),
-  key="updatable",
-  navigate = useNavigate();
+  navigate = useNavigate(),
+  mobileNumRequiredLength = 10,
+  usernameRequiredLength = 3,
+  passwordRequiredLength = 8,
+  textOnlyReg = /^[a-zA-Z -]+$/,
+  mobileNumReg = /^[0-9+()]+$/,
+  emailReg = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9+_.-]+\.[a-zA-Z]+$/;
 
     function handleInput(e){
 
         var inputedValue = e.target.value.trim(),
-        err = "",
-        mobileNumRequiredLength = 10,
-        usernameRequiredLength = 3,
-        passwordRequiredLength = 8,
-        textOnlyReg = /^[a-zA-Z ]+$/,
-        mobileNumReg = /^[0-9+()]+$/,
-        emailReg = /^/;
+        err = "";
+
 
         if(e.target.name === "signup-fullname"){
             
@@ -98,6 +98,11 @@ export default function Signup() {
 
                 err = "Email field can't be empty";
 
+            }else{
+
+                if(!emailReg.test(inputedValue)){
+                    err = "Please input a valid email address";
+                }
             }
 
             setSignupState((prevState)=>{
@@ -231,20 +236,27 @@ export default function Signup() {
 
     useEffect(()=>{
 
-        
-    var mobileNumRequiredLength = 10,
-        usernameRequiredLength = 3,
-        passwordRequiredLength = 8,
-        textOnlyReg = /^[a-zA-Z ]+$/,
-        mobileNumReg = /^[0-9+()]+$/,
-        emailReg = /^/
+        var mobileNumRequiredLength = 10,
+            usernameRequiredLength = 3,
+            passwordRequiredLength = 8,
+            textOnlyReg = /^[a-zA-Z -]+$/,
+            mobileNumReg = /^[0-9+()]+$/,
+            emailReg = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9+_.-]+\.[a-zA-Z]+$/;
 
-        if(signupState.fullName.trim() !== "" && textOnlyReg.test(signupState.fullName) && signupState.userName.trim() !== "" && signupState.userName.length >= usernameRequiredLength && signupState.email.trim() !== "" && signupState.mobileNumber.trim() !== "" && mobileNumReg.test(signupState.mobileNumber) && signupState.mobileNumber >= mobileNumRequiredLength && signupState.address.trim() !== "" && signupState.passwordOne.trim() !== "" && signupState.passwordOne.length >= passwordRequiredLength && signupState.passwordTwo === signupState.passwordOne){
+
+        if(signupState.fullName.trim() !== "" && textOnlyReg.test(signupState.fullName) && signupState.userName.trim() !== "" && signupState.userName.length >= usernameRequiredLength && signupState.email.trim() !== "" && emailReg.test(signupState.email) && signupState.mobileNumber.trim() !== "" && mobileNumReg.test(signupState.mobileNumber) && signupState.mobileNumber >= mobileNumRequiredLength && signupState.address.trim() !== "" && signupState.passwordOne.trim() !== "" && signupState.passwordOne.length >= passwordRequiredLength && signupState.passwordTwo === signupState.passwordOne){
 
             setButtonState((prevState)=>{
                 return({
                     ...prevState,
                     buttonDisabled: false
+                })
+            })
+        }else{
+            setButtonState((prevState)=>{
+                return({
+                    ...prevState,
+                    buttonDisabled: true
                 })
             })
         }
@@ -254,14 +266,8 @@ export default function Signup() {
 
     function signUserUp(){
 
-         var mobileNumRequiredLength = 10,
-        usernameRequiredLength = 3,
-        passwordRequiredLength = 8,
-        textOnlyReg = /^[a-zA-Z ]+$/,
-        mobileNumReg = /^[0-9+()]+$/,
-        emailReg = /^/
 
-        if(signupState.fullName.trim() !== "" && textOnlyReg.test(signupState.fullName) && signupState.userName.trim() !== "" && signupState.userName.length >= usernameRequiredLength && signupState.email.trim() !== "" && signupState.mobileNumber.trim() !== "" && mobileNumReg.test(signupState.mobileNumber) && signupState.mobileNumber >= mobileNumRequiredLength && signupState.address.trim() !== "" && signupState.passwordOne.trim() !== "" && signupState.passwordOne.length >= passwordRequiredLength && signupState.passwordTwo === signupState.passwordOne){
+        if(signupState.fullName.trim() !== "" && textOnlyReg.test(signupState.fullName) && signupState.userName.trim() !== "" && signupState.userName.length >= usernameRequiredLength && signupState.email.trim() !== "" && emailReg.test(signupState.email) && signupState.mobileNumber.trim() !== "" && mobileNumReg.test(signupState.mobileNumber) && signupState.mobileNumber >= mobileNumRequiredLength && signupState.address.trim() !== "" && signupState.passwordOne.trim() !== "" && signupState.passwordOne.length >= passwordRequiredLength && signupState.passwordTwo === signupState.passwordOne){
             var email = signupState.email;
 
             setButtonState((prevState)=>{
