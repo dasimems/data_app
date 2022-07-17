@@ -7,6 +7,8 @@ import LandingPageContent from "./components/landing_page_content";
 
 import { useParams } from "react-router-dom";
 import Login from "./components/login";
+import Verify from "./components/verify";
+import PasswordReset from "./components/password_reset";
 import Signup from "./components/signup";
 import './assets/styles/index.css';
 
@@ -77,6 +79,13 @@ function App() {
             left: 0
           });
 
+        }else{
+
+          window.scrollTo({
+            top: 0,
+            left: 0
+          });
+
         }
 
         if(links[0] === "login"){
@@ -95,6 +104,26 @@ function App() {
               return({
                 ...prevState,
                 component: <Signup />,
+                bgColor: color
+              })
+          })
+
+        }else  if(links[0] === "verify"){
+
+          setPageState((prevState)=>{
+              return({
+                ...prevState,
+                component: <Verify/>,
+                bgColor: color
+              })
+          })
+
+        }else  if(links[0] === "password-reset"){
+
+          setPageState((prevState)=>{
+              return({
+                ...prevState,
+                component: <PasswordReset/>,
                 bgColor: color
               })
           })

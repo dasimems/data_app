@@ -980,6 +980,51 @@ body .page-sections .page-login-container .form-container .content-center button
   width: 100%;
 }
 
+body .page-sections .page-verify-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .page-sections .page-verify-container .verify-text {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 30px;
+}
+
+body .page-sections .page-verify-container .login-link {
+  font-size: 1.3rem;
+  position: relative;
+  color: #3D59E8;
+}
+
+body .page-sections .page-verify-container .login-link::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -1px;
+  width: 0%;
+  height: 1.5px;
+  background: #3D59E8;
+}
+
+body .page-sections .page-verify-container .login-link:hover::after {
+  width: 100%;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
 body .page-footer {
   background: #2D323D;
   color: #c7c5c5;

@@ -1,7 +1,7 @@
 import { Button, Col, message } from 'antd'
 import React, { useState } from 'react'
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Login() {
 
@@ -14,7 +14,8 @@ export default function Login() {
             loginErr: ""
         },
         [loginState, setLoginState] = useState(loginProps),
-        key="updatable";
+        key="updatable",
+        navigate = useNavigate();
 
     function handleInput(e){
 
@@ -77,6 +78,12 @@ export default function Login() {
                         key
                         
                     })
+
+                    setTimeout(()=>{
+
+                        navigate("/dashboard")
+
+                    }, 1000);
 
                 }, 1000)
 
