@@ -20,37 +20,44 @@ function App() {
       {
           link: "home",
           label: "Home",
-          borderAvailable: false
+          borderAvailable: false,
+          followHash: true
       },
       {
           link: "service",
           label: "Service",
-          borderAvailable: false
+          borderAvailable: false,
+          followHash: true
       },
       {
           link: "about",
           label: "About",
-          borderAvailable: false
+          borderAvailable: false,
+          followHash: true
       },
       {
           link: "price",
           label: "Price",
-          borderAvailable: false
+          borderAvailable: false,
+          followHash: true
       },
       {
           link: "testimonial",
           label: "Testimonial",
-          borderAvailable: false
+          borderAvailable: false,
+          followHash: true
       },
       {
           link: "faq",
           label: "FAQ",
-          borderAvailable: false
+          borderAvailable: false,
+          followHash: true
       },
       {
           link: "login",
           label: "Sign In",
-          borderAvailable: true
+          borderAvailable: true,
+          followHash: false
       }
   ],
   pageProps = {
@@ -59,31 +66,20 @@ function App() {
   },
   [pageState, setPageState] = useState(pageProps);
 
+
   useEffect(()=>{
 
-    var links = pageLinkParams["*"].split("/"),
-        hashName = window.location.hash,
-        color = "rgb(248, 248, 248)",
-        sectionElement,
-        topScroll = 0;
+    var hashName = window.location.hash,
+      links = pageLinkParams["*"].split("/"),
+      color = "rgb(248, 248, 248)";
 
-        if(hashName !== ""){
-
-          sectionElement = document.getElementById(hashName.slice(1));
-
-          if(sectionElement){
-            topScroll = sectionElement.offsetTop;
-          }
-
-        }
-
+        
+      if(hashName === ""){
         window.scrollTo({
-          top: (topScroll - 100),
+          top: 0,
           left: 0
-        });
-
-        // console.log(topScroll);
-
+        })
+      }
 
         if(links[0] === "login"){
 

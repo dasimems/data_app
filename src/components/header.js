@@ -3,7 +3,7 @@ import {Row, Col, Button } from "antd"
 
 import { BiMenu } from "react-icons/bi"
 import { MdOutlineClose } from "react-icons/md"
-import { Link } from "react-router-dom"
+import { Link, useParams, useNavigate } from "react-router-dom"
 
 export default function Header(props){
 
@@ -12,7 +12,13 @@ export default function Header(props){
             activeLink: window.location.hash !== ""? window.location.hash.slice(1): "home",
             mobileHeader: false
         },
-        [headerState, setHeaderState] = useState(headerProps);
+        [headerState, setHeaderState] = useState(headerProps),
+        linkPosition = props.links.filter((proplink)=>document.getElementById("page-" + proplink.link)),
+        linkClick = false,
+        params = useParams(),
+        navigate = useNavigate();
+
+        // console.log(linkPosition)
         
         
         // console.log(secPos)
@@ -20,10 +26,105 @@ export default function Header(props){
         useEffect(()=>{
             window.addEventListener('scroll', checkScroll);
             
-            window.addEventListener("hashchange", ()=>{
-                var links = window.location.hash.slice(1);
+            // window.addEventListener("hashchange", (e)=>{
+            //     var links = window.location.hash.slice(1);
+
+            //     // console.log(e);
                 
-                setHeaderState((prevState)=>{
+            //     setHeaderState((prevState)=>{
+    
+            //         return(
+            //             {
+            //                 ...prevState,
+            //                 mobileHeader: false,
+            //                 activeLink: links === ""? "home": links
+            //             }
+            //         );
+        
+            //     });
+    
+            //     // console.log("working")
+    
+            // });
+
+            function checkScroll(){
+        
+                var topPos = window.scrollY,
+                    linkPos;
+
+                    if(document.getElementById("page-home")){
+
+                        linkPos = linkPosition.filter((links)=> topPos >= (document.getElementById("page-" + links.link).offsetTop - 100))
+
+                        if(linkPos.length > 0){
+                            
+                            var linkValue = linkPos[(linkPos.length - 1)].link.replace("page-", "")
+                            if(window.location.hash !== "#" + linkValue){
+    
+                                if(linkClick === false){
+    
+                                    window.location.hash = linkValue;
+        
+                                    changeActiveLink(linkValue);
+                                }
+    
+    
+    
+                            }
+    
+                        }
+                    }
+
+
+            
+            }
+
+        }, [linkPosition, linkClick])
+
+        function scrollToElement(link){
+
+            changeActiveLink(link)
+
+            if(params["*"].length !== 0){
+
+                navigate("/#" + link)
+
+                
+
+            }else{
+
+                window.location.hash = link;
+    
+                if(document.getElementById("page-" + link)){
+                    // console.log("work")
+    
+                    
+    
+                    linkClick = true;
+    
+                    scrollEle(link);
+                    
+    
+                }
+            }
+
+
+        }
+
+        async function scrollEle(link){
+
+            await window.scrollTo({
+                top: document.getElementById("page-" + link).offsetTop,
+                left: 0
+            })
+            
+            linkClick = false;
+        }
+
+
+    async function changeActiveLink(links){
+
+            await setHeaderState((prevState)=>{
     
                     return(
                         {
@@ -34,19 +135,7 @@ export default function Header(props){
                     );
         
                 });
-    
-                // console.log("working")
-    
-            });
 
-        }, [])
-
-
-    
-    function checkScroll(){
-
-        
-    
     }
 
     function changeHeader(){
@@ -87,7 +176,7 @@ export default function Header(props){
                             return(
                                 <li key={linkKey} id={headerState.activeLink === links.link? "active-link": "non-active-link"} >
 
-                                    <a className={links.borderAvailable? "border-link": "non-border-link"} href={"#" + links.link}>{links.label}</a>
+                                    {links.followHash? <Link onClick={(e)=>{e.preventDefault(); scrollToElement(links.link)}} className={links.borderAvailable? "border-link": "non-border-link"} to={"/#" + links.link}>{links.label}</Link>: <Link to={"/" + links.link} className={links.borderAvailable? "border-link": "non-border-link"}>{links.label}</Link>}
 
                                 </li>
                             );
@@ -115,7 +204,7 @@ export default function Header(props){
                             return(
                                 <li key={linkKey} id={headerState.activeLink === links.link? "active-link": "non-active-link"} >
 
-                                    <a className={links.borderAvailable? "border-link": "non-border-link"} href={"#" + links.link}>{links.label}</a>
+                                    {links.followHash? <Link onClick={(e)=>{e.preventDefault(); scrollToElement(links.link)}} className={links.borderAvailable? "border-link": "non-border-link"} to={"/#" + links.link}>{links.label}</Link>: <Link to={"/" + links.link} className={links.borderAvailable? "border-link": "non-border-link"}>{links.label}</Link>}
 
                                 </li>
                             );

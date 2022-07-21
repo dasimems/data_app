@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { Row, Col, Button,Collapse } from "antd";
 
@@ -16,10 +16,34 @@ export default function LandingPageContent() {
     navigate(link);
 
   }
+
+  useEffect(()=>{
+
+    var hashName = window.location.hash,
+      sectionElement,
+      topScroll = 0
+
+    if(hashName !== ""){
+  
+      sectionElement = document.getElementById("page-" + hashName.slice(1));
+  
+      if(sectionElement){
+        topScroll = sectionElement.offsetTop;
+      }
+  
+    }
+  
+    window.scrollTo({
+      top: (topScroll - 100),
+      left: 0
+    });
+  
+    // console.log(topScroll);
+  }, []);
   return (
     <>
     
-        <Col span={24} className="page-banner" id="home">
+        <Col span={24} className="page-banner" id="page-home">
 
           <Row justify="space-between" className="banner-container">
 
@@ -97,7 +121,7 @@ export default function LandingPageContent() {
 
         </Col>
 
-        <Col span={24} className="page-service" id="service">
+        <Col span={24} className="page-service" id="page-service">
 
             <h4>Rendered Services</h4>
             <h1>Services</h1>
@@ -176,7 +200,7 @@ export default function LandingPageContent() {
 
         </Col>
 
-        <Col span={22} className="page-about" id="about">
+        <Col span={22} className="page-about" id="page-about">
 
           <Row justify="space-between" className="page-about-container">
 
@@ -264,7 +288,7 @@ export default function LandingPageContent() {
 
         </Col>
 
-        <Col span={24} className="page-pricing" id="price">
+        <Col span={24} className="page-pricing" id="page-price">
 
           <h1>Affordable Data Plans and Price</h1>
 
@@ -482,7 +506,7 @@ export default function LandingPageContent() {
 
         </Col>
 
-        <Col span={22} className="page-testimonial" id="testimonial">
+        <Col span={22} className="page-testimonial" id="page-testimonial">
 
             <h1>Testimonial?</h1>
 
@@ -544,7 +568,7 @@ export default function LandingPageContent() {
 
         </Col>
 
-        <Col span={24} className="page-faq" id="faq">
+        <Col span={24} className="page-faq" id="page-faq">
 
           <h1>FAQ</h1>
 
