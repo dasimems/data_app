@@ -62,31 +62,28 @@ function App() {
   useEffect(()=>{
 
     var links = pageLinkParams["*"].split("/"),
-        sectionElement = document.getElementById(links[0]),
-        color = "rgb(248, 248, 248)";
+        hashName = window.location.hash,
+        color = "rgb(248, 248, 248)",
+        sectionElement,
+        topScroll = 0;
 
-        // console.log(links);
+        if(hashName !== ""){
 
-        if(links.length < 1 || links[0] === ""){
-          sectionElement = document.getElementById("home")
-        }
+          sectionElement = document.getElementById(hashName.slice(1));
 
-        if(sectionElement){
-          // console.log(sectionElement.offsetTop);
-
-          window.scrollTo({
-            top: (sectionElement.offsetTop - 100),
-            left: 0
-          });
-
-        }else{
-
-          window.scrollTo({
-            top: 0,
-            left: 0
-          });
+          if(sectionElement){
+            topScroll = sectionElement.offsetTop;
+          }
 
         }
+
+        window.scrollTo({
+          top: (topScroll - 100),
+          left: 0
+        });
+
+        // console.log(topScroll);
+
 
         if(links[0] === "login"){
 

@@ -3,52 +3,49 @@ import {Row, Col, Button } from "antd"
 
 import { BiMenu } from "react-icons/bi"
 import { MdOutlineClose } from "react-icons/md"
-import { Link, useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export default function Header(props){
 
 
-    var linkParams = useParams(),
-        headerProps = {
-            activeLink: "home",
+    var headerProps = {
+            activeLink: window.location.hash !== ""? window.location.hash.slice(1): "home",
             mobileHeader: false
         },
         [headerState, setHeaderState] = useState(headerProps);
         
-        window.addEventListener('scroll', checkScroll);
-
+        
         // console.log(secPos)
+        
+        useEffect(()=>{
+            window.addEventListener('scroll', checkScroll);
+            
+            window.addEventListener("hashchange", ()=>{
+                var links = window.location.hash.slice(1);
+                
+                setHeaderState((prevState)=>{
+    
+                    return(
+                        {
+                            ...prevState,
+                            mobileHeader: false,
+                            activeLink: links === ""? "home": links
+                        }
+                    );
+        
+                });
+    
+                // console.log("working")
+    
+            });
 
-    useEffect(()=>{
+        }, [])
 
-        var links = linkParams["*"].split("/");
 
-        setHeaderState((prevState)=>{
-
-            return(
-                {
-                    ...prevState,
-                    mobileHeader: false,
-                    activeLink: links[0] === ""? "home": links[0]
-                }
-            );
-
-        });
-
-        // console.log(links[0]);
-
-    }, [linkParams]);
-
+    
     function checkScroll(){
 
-        // var posY = window.scrollY,
-        //     activeLink = linkParams["*"].split("/");
-
-        // console.log(posY);
-
-
         
-        // console.log("working")
     
     }
 
@@ -90,7 +87,7 @@ export default function Header(props){
                             return(
                                 <li key={linkKey} id={headerState.activeLink === links.link? "active-link": "non-active-link"} >
 
-                                    <Link className={links.borderAvailable? "border-link": "non-border-link"} to={`/${links.link}`}>{links.label}</Link>
+                                    <a className={links.borderAvailable? "border-link": "non-border-link"} href={"#" + links.link}>{links.label}</a>
 
                                 </li>
                             );
@@ -118,7 +115,7 @@ export default function Header(props){
                             return(
                                 <li key={linkKey} id={headerState.activeLink === links.link? "active-link": "non-active-link"} >
 
-                                    <Link className={links.borderAvailable? "border-link": "non-border-link"} to={`/${links.link}`}>{links.label}</Link>
+                                    <a className={links.borderAvailable? "border-link": "non-border-link"} href={"#" + links.link}>{links.label}</a>
 
                                 </li>
                             );
