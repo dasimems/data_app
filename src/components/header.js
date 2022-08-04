@@ -8,14 +8,14 @@ import { Link, useParams, useNavigate } from "react-router-dom"
 export default function Header(props){
 
 
-    var headerProps = {
-            activeLink: window.location.hash !== ""? window.location.hash.slice(1): "home",
+    var params = useParams(), 
+        headerProps = {
+            activeLink: window.location.hash !== "" && params["*"] === ""? window.location.hash.slice(1): "home",
             mobileHeader: false
         },
         [headerState, setHeaderState] = useState(headerProps),
         linkPosition = props.links.filter((proplink)=>document.getElementById("page-" + proplink.link)),
         linkClick = false,
-        params = useParams(),
         navigate = useNavigate();
 
         // console.log(linkPosition)
@@ -79,7 +79,22 @@ export default function Header(props){
             
             }
 
-        }, [linkPosition, linkClick])
+        }, [linkPosition, linkClick]);
+
+        useEffect(()=>{
+
+            if(params["*"] !== ""){
+                setHeaderState((prevState)=>{
+
+                    return({
+                        ...prevState,
+                        activeLink: params["*"]
+                    })
+
+                })
+            }
+
+        }, [params])
 
         function scrollToElement(link){
 
@@ -204,7 +219,10 @@ export default function Header(props){
                             return(
                                 <li key={linkKey} id={headerState.activeLink === links.link? "active-link": "non-active-link"} >
 
-                                    {links.followHash? <Link onClick={(e)=>{e.preventDefault(); scrollToElement(links.link)}} className={links.borderAvailable? "border-link": "non-border-link"} to={"/#" + links.link}>{links.label}</Link>: <Link to={"/" + links.link} className={links.borderAvailable? "border-link": "non-border-link"}>{links.label}</Link>}
+                                    {links.followHash? 
+                                        <Link onClick={(e)=>{e.preventDefault(); scrollToElement(links.link)}} className={links.borderAvailable? "border-link": "non-border-link"} to={"/#" + links.link}>{links.label}</Link>
+                                        :
+                                         <Link to={"/" + links.link} className={links.borderAvailable? "border-link": "non-border-link"}>{links.label}</Link>}
 
                                 </li>
                             );

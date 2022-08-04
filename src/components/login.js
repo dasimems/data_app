@@ -4,6 +4,7 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function Login() {
+    document.title = "Login";
 
     var loginProps = {
             userName: "",

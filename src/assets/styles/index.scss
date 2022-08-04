@@ -170,8 +170,9 @@ body{
     
     .page-sections{
           
-        padding-top: 100px;
+        padding-top: 100ppax;
         min-height: calc(100vh);
+        align-items: center;
 
         .page-banner{
             height: calc(100vh - 100px);
@@ -713,6 +714,11 @@ body{
                     font-size: 1.3rem;
                     text-transform: uppercase;
                 }
+            }
+
+            .login-header-description{
+                margin-top: 20px;
+                
             }
 
             .form-container{

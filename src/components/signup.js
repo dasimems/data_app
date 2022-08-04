@@ -5,6 +5,8 @@ import { Link, useNavigate } from 'react-router-dom';
 
 export default function Signup() {
 
+    document.title = "Create New Account"
+
     var signupProps = {
       userName: "",
       passwordTwo: "",
