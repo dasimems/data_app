@@ -756,6 +756,7 @@ body .page-sections .page-verify-container .redo-button {
   position: relative;
   color: #3D59E8;
   border: none;
+  box-shadow: none;
 }
 body .page-sections .page-verify-container .redo-button::after {
   position: absolute;
