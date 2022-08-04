@@ -15,7 +15,7 @@ export default function PasswordReset() {
 
     useEffect(()=>{
 
-        if(((searchParams.has("email") || searchParams.has("mail")) && (searchParams.get("email") !== "" || searchParams.get("mail") !== "")) && !searchParams.has("key")){
+        if(((searchParams.has("email") || searchParams.has("mail")) && (searchParams.get("email") !== "" && searchParams.get("mail") !== "")) && !searchParams.has("key")){
             //code to check if the user email is available in the database
             //code to check if reset link has been sent else send request link
             //if email not found in db, throw an invalid link
@@ -27,7 +27,7 @@ export default function PasswordReset() {
                 })
             })
 
-        }else if(((searchParams.has("email") || searchParams.has("mail")) && (searchParams.get("email") !== "" || searchParams.get("mail") !== "")) && searchParams.has("key") && searchParams.get("key") !== ""){
+        }else if(((searchParams.has("email") || searchParams.has("mail")) && (searchParams.get("email") !== "" && searchParams.get("mail") !== "")) && searchParams.has("key") && searchParams.get("key") !== ""){
 
             //check if key match the key in database.
             //if key doesn't match throw an invalid link
