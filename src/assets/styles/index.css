@@ -749,6 +749,27 @@ body .page-sections .page-verify-container .login-link:hover::after {
   width: 100%;
   transition: 0.5s ease all;
 }
+body .page-sections .page-verify-container .redo-button {
+  height: auto;
+  padding: 0px;
+  background: transparent;
+  position: relative;
+  color: #3D59E8;
+  border: none;
+}
+body .page-sections .page-verify-container .redo-button::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 2px;
+  bottom: -1px;
+  left: 0px;
+  background: #3D59E8;
+}
+body .page-sections .page-verify-container .redo-button:hover::after {
+  transition: 0.5s ease all;
+  width: 100%;
+}
 body .page-footer {
   background: #2D323D;
   color: rgb(199, 197, 197);
