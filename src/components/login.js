@@ -71,7 +71,7 @@ export default function Login() {
 
                     setTimeout(()=>{
 
-                        navigate("/dashboard")
+                        navigate("/user")
 
                     }, 3000);
 

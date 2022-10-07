@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <>
     
-        this is the dashboard footer
+        <footer>This is dashboard footer</footer>
     
     </>
   )

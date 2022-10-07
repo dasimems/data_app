@@ -2,3 +2,86 @@
     padding: 0;
     margin: 0;
 }
+
+body{
+    width: 100vw;
+    font-size: 16px;
+
+
+    .header{
+        width: 100%;
+        height: 60px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .2);
+        position: fixed;
+        z-index: 99;
+
+        .header-logo,
+        .header-link{
+            height: 60px;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .header-logo{
+            justify-content: space-between;
+
+            .nav-open-close-button{
+                background: transparent;
+                border: none;
+                box-shadow: none;
+                font-size: 1.5rem;
+                z-index: 9;
+    
+            }
+        }
+
+
+        .header-link{
+            justify-content: flex-end;
+            
+            ul{
+
+                display: flex;
+                list-style: none;
+
+                li{
+
+                    .header-logout-button{
+                        background: transparent;
+                        border: none;
+                        box-shadow: none;
+                        color: black;
+
+
+                    }
+                }
+            }
+        }
+    }
+
+    .dashboard{
+        width: 100%;
+        padding-top: 60px;
+        min-height: 100vh;
+
+        .dashboard-nav{
+            position: relative;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .1);
+            transition: 0.5s ease all;
+            height: 100vh;
+
+            nav{
+                position: fixed;
+                width: 100%;
+                background: red;
+                border: 1px solid red;
+            }
+
+        }
+
+        .user-content{
+            transition: 0.5s ease all;
+        }
+    }
+}

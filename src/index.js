@@ -13,7 +13,7 @@ root.render(
 
       <Routes>
         
-        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/user' element={<Dashboard />} />
         <Route path='/*' element={<App />} />
 
       </Routes>
